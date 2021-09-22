@@ -1,0 +1,65 @@
+<html>
+<head>  
+<style>.body_backgorund {
+    background-image: url("https://thumbs.dreamstime.com/b/vector-colored-pencils-circle-background-file-eps-format-31016558.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1
+  {
+      color: red; 
+      font-size: 40px;
+  }
+  #myCanvas
+  {
+      border-width:10px;
+      background-color: white; 
+      border-style:solid;
+  }
+
+  button {
+    background-color: #4CAF50;
+    border: solid;
+    color: white;
+    padding: 10px 42px;
+    font-size: 16px;
+  }
+
+  input
+  {
+    margin-right: 20px;
+  }
+  </style>
+
+    <script type="text/javascript">
+</script>
+
+</head>
+<body class="body_backgorund">
+
+<div align="center">
+<center><h1>Paint&nbsp;</h1>
+    <input type="text" id="color_text">
+    <br><br>
+    <canvas id="myCanvas" width="900" height="400"></canvas>
+</center>
+<!--Additional activity -->
+
+    </div>
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var ctx= canvas.getContext("2d");
+    var mouse_evnt="empty";
+    var XP,YP,line_width=1,color="green";
+
+    canvas.addEventListener("mousedown",A_Mousedown);
+    function A_Mousedown(e){
+        color=document.getElementById("color_text").value;
+        canvas.style.background=color;
+    }
+</script>
+</body>
+</html>
